@@ -10,31 +10,15 @@ namespace Generics
             double[] percent = { 1.2, 2.3, 22.6, 50.7, 0.85 };
             Char[] Alphabets = { 'R', 'E', 'S', 'D' };
 
-            Program.toPrint(numbers);
-            Program.toPrint(percent);
-            Program.toPrint(Alphabets);
+            Program.toPrint<int>(numbers);
+            Program.toPrint<double>(percent);
+            Program.toPrint<char>(Alphabets);
         }
-        public static void toPrint(int[] numbers)
+        public static void toPrint<T>(T[] inputArray)
         {
-            foreach (int num in numbers)
+            foreach (var element in inputArray)
             {
-                Console.WriteLine(num);
-            }
-            Console.WriteLine("----------------------");
-        }
-        public static void toPrint(double[] percent)
-        {
-            foreach (double per in percent)
-            {
-                Console.WriteLine(per);
-            }
-            Console.WriteLine("----------------------");
-        }
-        public static void toPrint(char[] Alphabets)
-        {
-            foreach (char letter in Alphabets)
-            {
-                Console.WriteLine(letter);
+                Console.WriteLine(element);
             }
             Console.WriteLine("----------------------");
         }
